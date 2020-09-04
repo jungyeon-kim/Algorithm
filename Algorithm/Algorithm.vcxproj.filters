@@ -54,5 +54,8 @@
     <ClCompile Include="quick_sort.cpp">
       <Filter>소스 파일\0.divide and conquer</Filter>
     </ClCompile>
+    <ClCompile Include="heap_sort.cpp">
+      <Filter>소스 파일\0.divide and conquer</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
