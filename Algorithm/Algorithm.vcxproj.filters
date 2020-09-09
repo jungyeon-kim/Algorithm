@@ -57,5 +57,11 @@
     <ClCompile Include="heap_sort.cpp">
       <Filter>소스 파일\0.divide and conquer</Filter>
     </ClCompile>
+    <ClCompile Include="DFS.cpp">
+      <Filter>소스 파일\1.greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="BFS.cpp">
+      <Filter>소스 파일\1.greedy</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
