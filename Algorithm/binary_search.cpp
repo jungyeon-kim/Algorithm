@@ -5,7 +5,7 @@ using namespace std;
 /*
 	이진탐색) logn
 
-	1. 배열의 중간값이 찾는값인지 검사
+	1. 배열의 중간값(부모노드)이 찾는값인지 검사
 	2. 찾는값이 중간값보다 작다면 좌측의 중간값과 비교하고, 크다면 우측의 중간값과 비교
 	3. 2 반복
 
@@ -20,7 +20,7 @@ bool binarySearch(int* arr, int len, int key)
 
 	while (end - start >= 0)
 	{
-		mid = (start + end) / 2;					// 중간값 Set
+		mid = (start + end) / 2;					// 중간값(부모노드) Set
 
 		if (arr[mid] == key) return true;			// 찾는값이 중간값이라면
 		else if (arr[mid] < key) start = mid + 1;	// 찾는값이 중간값보다 크다면

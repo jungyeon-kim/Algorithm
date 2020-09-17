@@ -51,7 +51,7 @@ public:
 
 	Queue& operator= (const Queue& rhs) { if (arr) delete[] arr; deepCopy(rhs); return *this; }
 
-	void push(T value) { if (curSize == maxSize) resize(); arr[++rearIdx %= maxSize] = value; ++curSize; }
+	void push(const T& value) { if (curSize == maxSize) resize(); arr[++rearIdx %= maxSize] = value; ++curSize; }
 	void pop() { if (!empty()) { ++frontIdx %= maxSize; --curSize; } }
 	int size() const { return curSize; }
 	int capacity() const { return maxSize; }
@@ -112,6 +112,9 @@ Queue<Pos> BFS(Pos start, Pos end, int** G, Pos size)
 
 int main()
 {
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+
 	int row{}, column{};
 	cin >> row >> column;
 

@@ -5,7 +5,7 @@ using namespace std;
 /*
 	DFS) 모든경로
 
-	1. 한 방향부터 방문
+	1. 한 방향부터 방문 (막히면 다시 돌아와 다른곳을 탐색 -> 백트래킹)
 	2. Stack or 재귀함수를 이용
 	4. BFS와 다르게 최단경로를 보장안함
 */
@@ -39,7 +39,7 @@ public:
 
 	Stack& operator=(const Stack& rhs) { if (arr) delete[] arr; deepCopy(rhs); return *this; }
 
-	void push(T value) { if (topIdx == maxSize - 1) resize(); arr[++topIdx] = value; }
+	void push(const T& value) { if (topIdx == maxSize - 1) resize(); arr[++topIdx] = value; }
 	void pop() { if (!empty()) --topIdx; }
 	int size() const { return topIdx + 1; }
 	int capacity() const { return maxSize; }
@@ -91,6 +91,9 @@ Stack<Stack<Pos>> DFS(Pos start, Pos end, int** G, Pos size)
 
 int main()
 {
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+
 	int row{}, column{};
 	cin >> row >> column;
 

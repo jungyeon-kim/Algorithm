@@ -28,12 +28,6 @@
     <Filter Include="소스 파일\3.approximation">
       <UniqueIdentifier>{91f04512-9531-4e8f-a487-16b9f7907570}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\4.backtracking">
-      <UniqueIdentifier>{37127f81-d700-41ec-83db-9eb5f1b2e426}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="소스 파일\5.branch and bound">
-      <UniqueIdentifier>{f00fc954-d3b5-4da0-afa3-e8188f146d12}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="소수판별.cpp">
@@ -61,6 +55,12 @@
       <Filter>소스 파일\1.greedy</Filter>
     </ClCompile>
     <ClCompile Include="BFS.cpp">
+      <Filter>소스 파일\1.greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="Dijkstra1.cpp">
+      <Filter>소스 파일\1.greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="Dijkstra2.cpp">
       <Filter>소스 파일\1.greedy</Filter>
     </ClCompile>
   </ItemGroup>
