@@ -6,30 +6,36 @@
 using namespace std;
 
 /*
-	Dijkstra) 최단경로
+	다익스트라) 최단경로
 
 	1. 연결되어 있으면서 가중치가 적은 노드부터 탐색해가며 거리를 갱신
 	2. PriorityQueue를 이용
 	3. 가중치를 고려하기 때문에 평균속도는 BFS보다 느림 But, 가중치가 존재하는 그래프는 BFS로 최단경로를 찾을 수 없음
 
-	※ 노드의 번호가 연속된 경우 -> 배열을 이용 (이 코드는 노드번호가 1부터 시작)
+	※ 노드의 번호가 연속되지 않은 경우 -> map을 이용 (이 코드는 연결되지않은 노드를 고려하지 않음)
 */
 
 // 이동할 수 없다는 것을 16진수의 INT_MAX로 표현
 constexpr int INF{ 0x7FFFFFFF };
 
-int* Dijkstra(int start, vector<pair<int, int>>* arr, int size)
+const map<int, int>& Dijkstra(int start, map<int, vector<pair<int, int>>>& arr)
 {
 	// 방문할 노드의 거리와 번호를 저장하는 우선순위큐
 	priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq{};
 	// 각 노드의 최단거리를 저장하는 배열
-	int* dist{ new int[size] };
+	static map<int, int> dist{};
 
 	// 모든 노드를 이동할 수 없는 곳으로 초기화
-	for (int i = 0; i < size; ++i) dist[i] = INF;
+	for (const auto& i : arr)
+	{
+		dist[i.first] = INF;
+		for (int j = 0; j < i.second.size(); ++j)
+			if (dist[i.second[j].first] != INF)
+				dist[i.second[j].first] = INF;
+	}
 
-	pq.push({ 0, start - 1 });	// 가중치순으로 정렬하기위해 가중치가 first로 옴
-	dist[start - 1] = 0;
+	pq.push({ 0, start });	// 가중치순으로 정렬하기위해 가중치가 first로 옴
+	dist[start] = 0;
 
 	while (!pq.empty())
 	{
@@ -40,11 +46,11 @@ int* Dijkstra(int start, vector<pair<int, int>>* arr, int size)
 
 		for (int i = 0; i < arr[curNode].size(); ++i)
 		{
-			int nextNode{ arr[curNode][i].first - 1 };	// 방문할 노드
+			int nextNode{ arr[curNode][i].first };		// 방문할 노드
 			int nextWeight{ arr[curNode][i].second };	// 방문할 노드의 가중치
 
 			// 현재 노드까지의 거리 + 방문할 노드의 가중치가 방문할 노드까지의 거리보다 작다면,
-			// 방문할 노드까지의 거리를 갱신하고 pq에 방문할 노드까지의 거리와 방문할 노드를 push
+			// 방문할 노드까지의 거리를 갱신하고 pq에 방문할 노드까지의 거리와 방문할 노드의 번호를 push
 			if (dist[curNode] + nextWeight < dist[nextNode])
 			{
 				dist[nextNode] = dist[curNode] + nextWeight;
@@ -70,15 +76,15 @@ int main()
 	cin >> start;
 
 	// from에서 to가 weight로 연결됨
-	vector<pair<int, int>>* arr{ new vector<pair<int, int>>[N] };
+	map<int, vector<pair<int, int>>> arr{};
 	int from{}, to{}, weight{};
 	for (int i = 0; i < E; ++i)
 	{
 		cin >> from >> to >> weight;
-		arr[from - 1].emplace_back(to, weight);
+		arr[from].emplace_back(to, weight);
 	}
 
-	int* dist{ Dijkstra(start, arr, N) };
+	const auto& dist{ Dijkstra(start, arr) };
 
-	for (int i = 0; i < N; ++i) cout << "from: " << start << " to: " << i + 1 << " dist: " << dist[i] << "\n";
+	for (const auto& i : dist) cout << "from: " << start << " to: " << i.first << " dist: " << i.second << "\n";
 }

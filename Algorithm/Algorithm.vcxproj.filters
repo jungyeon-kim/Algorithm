@@ -45,23 +45,26 @@
     <ClCompile Include="DFS.cpp">
       <Filter>소스 파일\Graph</Filter>
     </ClCompile>
-    <ClCompile Include="Dijkstra1.cpp">
-      <Filter>소스 파일\Graph</Filter>
-    </ClCompile>
-    <ClCompile Include="Dijkstra2.cpp">
-      <Filter>소스 파일\Graph</Filter>
-    </ClCompile>
-    <ClCompile Include="PrimeNumber.cpp">
-      <Filter>소스 파일\Math</Filter>
-    </ClCompile>
-    <ClCompile Include="Fibonacci.cpp">
-      <Filter>소스 파일\Math</Filter>
-    </ClCompile>
-    <ClCompile Include="PrimeFactorization.cpp">
-      <Filter>소스 파일\Math</Filter>
-    </ClCompile>
     <ClCompile Include="gcd and lcm.cpp">
       <Filter>소스 파일\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="counting_sort.cpp">
+      <Filter>소스 파일\Sort</Filter>
+    </ClCompile>
+    <ClCompile Include="fibonacci.cpp">
+      <Filter>소스 파일\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="prime_factorization.cpp">
+      <Filter>소스 파일\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="prime_number.cpp">
+      <Filter>소스 파일\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="dijkstra_2.cpp">
+      <Filter>소스 파일\Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="dijkstra_1.cpp">
+      <Filter>소스 파일\Graph</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
