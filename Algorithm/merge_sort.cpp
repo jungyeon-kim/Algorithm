@@ -3,7 +3,7 @@
 using namespace std;
 
 /*
-	합병 정렬) nlogn
+	합병 정렬) O(nlogn)
 
 	1. 배열을 나눌 수 없는 상태까지 분할
 	2. 쪼개 놓은 배열들을 한 쌍으로 짝지어 병합

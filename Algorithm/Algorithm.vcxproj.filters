@@ -13,55 +13,55 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="소스 파일\0.divide and conquer">
-      <UniqueIdentifier>{1eb47b66-4125-4ef7-8484-050702edadf6}</UniqueIdentifier>
+    <Filter Include="소스 파일\Graph">
+      <UniqueIdentifier>{666d3c2a-a52b-4367-8c5d-1af0e97814ba}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\1.greedy">
-      <UniqueIdentifier>{afd30c3b-d1bb-494d-bbf5-98da39f4d231}</UniqueIdentifier>
+    <Filter Include="소스 파일\Search">
+      <UniqueIdentifier>{f0f2a1fb-98df-4b94-9b85-0e035934d1dc}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\2.dynamic programming">
-      <UniqueIdentifier>{dfbe8d8d-fcf6-4dc9-a59c-e9fc91c13fbc}</UniqueIdentifier>
+    <Filter Include="소스 파일\Sort">
+      <UniqueIdentifier>{220e5889-0b37-47fc-951f-8ef322eacd15}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\99.etc">
-      <UniqueIdentifier>{4b26958a-0a8d-45a6-b597-f55930ec4f80}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="소스 파일\3.approximation">
-      <UniqueIdentifier>{91f04512-9531-4e8f-a487-16b9f7907570}</UniqueIdentifier>
+    <Filter Include="소스 파일\Math">
+      <UniqueIdentifier>{8eb59513-caa0-4f23-b5a2-5f8136391549}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="소수판별.cpp">
-      <Filter>소스 파일\99.etc</Filter>
-    </ClCompile>
-    <ClCompile Include="최대공약수, 최소공배수.cpp">
-      <Filter>소스 파일\99.etc</Filter>
-    </ClCompile>
-    <ClCompile Include="소인수분해.cpp">
-      <Filter>소스 파일\99.etc</Filter>
-    </ClCompile>
-    <ClCompile Include="merge_sort.cpp">
-      <Filter>소스 파일\0.divide and conquer</Filter>
-    </ClCompile>
-    <ClCompile Include="binary_search.cpp">
-      <Filter>소스 파일\0.divide and conquer</Filter>
+    <ClCompile Include="heap_sort.cpp">
+      <Filter>소스 파일\Sort</Filter>
     </ClCompile>
     <ClCompile Include="quick_sort.cpp">
-      <Filter>소스 파일\0.divide and conquer</Filter>
+      <Filter>소스 파일\Sort</Filter>
     </ClCompile>
-    <ClCompile Include="heap_sort.cpp">
-      <Filter>소스 파일\0.divide and conquer</Filter>
+    <ClCompile Include="merge_sort.cpp">
+      <Filter>소스 파일\Sort</Filter>
     </ClCompile>
-    <ClCompile Include="DFS.cpp">
-      <Filter>소스 파일\1.greedy</Filter>
+    <ClCompile Include="binary_search.cpp">
+      <Filter>소스 파일\Search</Filter>
     </ClCompile>
     <ClCompile Include="BFS.cpp">
-      <Filter>소스 파일\1.greedy</Filter>
+      <Filter>소스 파일\Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="DFS.cpp">
+      <Filter>소스 파일\Graph</Filter>
     </ClCompile>
     <ClCompile Include="Dijkstra1.cpp">
-      <Filter>소스 파일\1.greedy</Filter>
+      <Filter>소스 파일\Graph</Filter>
     </ClCompile>
     <ClCompile Include="Dijkstra2.cpp">
-      <Filter>소스 파일\1.greedy</Filter>
+      <Filter>소스 파일\Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="PrimeNumber.cpp">
+      <Filter>소스 파일\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Fibonacci.cpp">
+      <Filter>소스 파일\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="PrimeFactorization.cpp">
+      <Filter>소스 파일\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="gcd and lcm.cpp">
+      <Filter>소스 파일\Math</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

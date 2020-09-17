@@ -3,7 +3,7 @@
 using namespace std;
 
 /*
-	힙 정렬) nlogn
+	힙 정렬) O(nlogn)
 
 	1. 초기 힙 구성
 	2. root 노드와 맨끝 노드를 swap

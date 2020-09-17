@@ -3,7 +3,7 @@
 using namespace std;
 
 /*
-	퀵 정렬) nlogn
+	퀵 정렬) O(nlogn)
 
 	1. pivot을 선정한다.
 	2. 맨 왼쪽과 맨 오른쪽을 left와 right로 선정
