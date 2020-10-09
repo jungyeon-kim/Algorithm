@@ -5,9 +5,15 @@
 using namespace std;
 
 /*
-Longest Increasing Subsequence) O(nlogn)
+	Longest Increasing Subsequence) O(nlogn)
 
-※ 2중포문을 통해서도 구현할 수 있지만, 이진탐색을 이용해 더 효율적으로 계산가능
+	1. 수열을 적재할 컨테이너를 준비
+	2. 첫번째 수열 적재
+	3. 다음 수열값이 컨테이너의 끝값 보다 크다면 그 뒤에 적재 (정렬이 보장됨)
+	4. 작다면 이진탐색을 통해 해당 수열값보다 다음으로 큰 자리에 덮어씌움
+	5. 3, 4 반복
+
+	※ 2중포문을 통해서도 구현할 수 있지만, 이진탐색을 이용해 더 효율적으로 계산가능
 */
 
 int main()
