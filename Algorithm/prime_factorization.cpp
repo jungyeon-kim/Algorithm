@@ -16,7 +16,7 @@ void primeFactorization(int num)
 		else ++div;
 	}
 
-	cout << "\num";
+	cout << "\n";
 }
 
 int main()

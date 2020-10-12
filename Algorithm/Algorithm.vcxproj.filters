@@ -72,7 +72,10 @@
     <ClCompile Include="LCS.cpp">
       <Filter>소스 파일\Math</Filter>
     </ClCompile>
-    <ClCompile Include="permutation.cpp">
+    <ClCompile Include="permutation_1.cpp">
+      <Filter>소스 파일\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="permutation_2.cpp">
       <Filter>소스 파일\Math</Filter>
     </ClCompile>
   </ItemGroup>

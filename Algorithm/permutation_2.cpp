@@ -10,6 +10,7 @@ using namespace std;
 						다음 조합의 순열이 이전 조합의 순열보다 순서가 뒤라면(더이상 조합을 찾을 수 없다면) false 반환
 
 	※ 대상이 오름차순으로 정렬되어있다고 가정하고 순열을 조합하기 때문에 정렬되어 있어야한다.
+	  -> prev_permutation은 그 반대
 */
 
 constexpr int MAX_SIZE{ 3 };
