@@ -26,7 +26,7 @@ int main()
 	cin >> N;
 
 	// 각 원소의 값
-	int* val{ new int[N] };
+	int* val{ new int[N]{} };
 	for (int i = 0; i < N; ++i) cin >> val[i];
 
 	// 최장길이 수열을 저장하는 컨테이너

@@ -20,20 +20,20 @@ private:
 private:
 	void deepCopy(const Stack& rhs)
 	{
-		arr = new T[rhs.maxSize];
+		arr = new T[rhs.maxSize]{};
 		for (int i = 0; i < rhs.maxSize; ++i) arr[i] = rhs.arr[i];
 		topIdx = rhs.topIdx;
 		maxSize = rhs.maxSize;
 	}
 	void resize()
 	{
-		T* newArr{ new T[maxSize *= 2] };
+		T* newArr{ new T[maxSize *= 2]{} };
 		copy(arr, arr + maxSize / 2, newArr);
 		delete[] arr;
 		arr = newArr;
 	}
 public:
-	Stack() { arr = new T[maxSize]; };
+	Stack() { arr = new T[maxSize]{}; };
 	Stack(const Stack& rhs) { deepCopy(rhs); }
 	~Stack() { if (arr) { delete[] arr; arr = nullptr; } }
 
@@ -97,8 +97,8 @@ int main()
 	int row{}, column{};
 	cin >> row >> column;
 
-	int** Graph{ new int*[row] };
-	for (int i = 0; i < row; ++i) Graph[i] = new int[column];
+	int** Graph{ new int*[row]{} };
+	for (int i = 0; i < row; ++i) Graph[i] = new int[column]{};
 
 	for (int i = 0; i < row; ++i)
 		for (int j = 0; j < column; ++j)

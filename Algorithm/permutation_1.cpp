@@ -43,7 +43,6 @@ int main()
 	sort(arr, arr + MAX_SIZE);
 
 	vector<vector<int>>* result{};
-
 	// 순열을 담는 컨테이너가 static 변수이므로 조합이 누적된다.
 	for (int i = 0; i < MAX_SIZE; ++i) result = DFS(arr, MAX_SIZE, i + 1, 0);
 

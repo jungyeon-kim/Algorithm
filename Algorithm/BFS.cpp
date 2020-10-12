@@ -20,7 +20,7 @@ private:
 private:
 	void deepCopy(const Queue& rhs)
 	{
-		arr = new T[rhs.maxSize];
+		arr = new T[rhs.maxSize]{};
 		for (int i = 0; i < rhs.maxSize; ++i) arr[i] = rhs.arr[i];
 		frontIdx = rhs.frontIdx;
 		rearIdx = rhs.rearIdx;
@@ -29,7 +29,7 @@ private:
 	}
 	void resize()
 	{
-		T* newArr{ new T[maxSize * 2] };
+		T* newArr{ new T[maxSize * 2]{} };
 
 		if (frontIdx - rearIdx > 0)
 		{
@@ -45,7 +45,7 @@ private:
 		maxSize *= 2;
 	}
 public:
-	Queue() { arr = new T[maxSize]; }
+	Queue() { arr = new T[maxSize]{}; }
 	Queue(const Queue& rhs) { deepCopy(rhs); }
 	~Queue() { if (arr) { delete[] arr; arr = nullptr; } }
 
@@ -73,8 +73,8 @@ Queue<Pos> BFS(Pos start, Pos end, int** G, Pos size)
 	// 이동방향을 저장하는 배열 (상, 하, 좌, 우)
 	Pos dir[4]{ {0, -1}, {0, 1}, {-1, 0}, {1, 0} };
 	// 부모노드(지나온 노드)를 저장하는 배열
-	Pos** parent{ new Pos*[size.y] };
-	for (int i = 0; i < size.y; ++i) parent[i] = new Pos[size.x];
+	Pos** parent{ new Pos*[size.y]{} };
+	for (int i = 0; i < size.y; ++i) parent[i] = new Pos[size.x]{};
 	// 최단이동 경로를 저장하는 큐
 	Queue<Pos> path{};
 	// 현재 위치한 노드
@@ -118,8 +118,8 @@ int main()
 	int row{}, column{};
 	cin >> row >> column;
 
-	int** Graph{ new int*[row] };
-	for (int i = 0; i < row; ++i) Graph[i] = new int[column];
+	int** Graph{ new int*[row]{} };
+	for (int i = 0; i < row; ++i) Graph[i] = new int[column]{};
 
 	for (int i = 0; i < row; ++i)
 		for (int j = 0; j < column; ++j)

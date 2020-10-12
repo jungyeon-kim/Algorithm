@@ -23,7 +23,7 @@ int* Dijkstra(int start, vector<pair<int, int>>* arr, int size)
 	// 방문할 노드의 거리와 번호를 저장하는 우선순위큐
 	priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq{};
 	// 각 노드의 최단거리를 저장하는 배열
-	int* dist{ new int[size] };
+	int* dist{ new int[size]{} };
 
 	// 모든 노드를 이동할 수 없는 곳으로 초기화
 	for (int i = 0; i < size; ++i) dist[i] = INF;
@@ -70,7 +70,7 @@ int main()
 	cin >> start;
 
 	// from에서 to가 weight로 연결됨
-	vector<pair<int, int>>* arr{ new vector<pair<int, int>>[N] };
+	vector<pair<int, int>>* arr{ new vector<pair<int, int>>[N]{} };
 	int from{}, to{}, weight{};
 	for (int i = 0; i < E; ++i)
 	{
