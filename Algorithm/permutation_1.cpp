@@ -6,7 +6,7 @@
 using namespace std;
 
 /*
-	순열조합) 백트래킹(DFS)
+	순열조합) DFS
 */
 
 vector<vector<int>>* DFS(int* arr, int size, int limit, int cnt)

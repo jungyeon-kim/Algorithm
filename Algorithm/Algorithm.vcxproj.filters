@@ -25,6 +25,9 @@
     <Filter Include="소스 파일\Math">
       <UniqueIdentifier>{8eb59513-caa0-4f23-b5a2-5f8136391549}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\BackTracking">
+      <UniqueIdentifier>{8161115b-9966-4248-856f-61b51e95f216}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="heap_sort.cpp">
@@ -73,10 +76,13 @@
       <Filter>소스 파일\Math</Filter>
     </ClCompile>
     <ClCompile Include="permutation_1.cpp">
-      <Filter>소스 파일\Math</Filter>
+      <Filter>소스 파일\BackTracking</Filter>
     </ClCompile>
     <ClCompile Include="permutation_2.cpp">
-      <Filter>소스 파일\Math</Filter>
+      <Filter>소스 파일\BackTracking</Filter>
+    </ClCompile>
+    <ClCompile Include="n_queen.cpp">
+      <Filter>소스 파일\BackTracking</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
