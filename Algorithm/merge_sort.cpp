@@ -7,7 +7,7 @@ using namespace std;
 
 	1. 배열을 나눌 수 없는 상태까지 분할
 	2. 쪼개 놓은 배열들을 한 쌍으로 짝지어 병합
-	3. 합쳐진 쌍들끼리 첫번째 원소들을 비교, 배제해가며 정렬
+	3. 합쳐진 쌍들끼리 첫번째 원소들부터 시작해 비교해가며 정렬
 	4. 2,3 반복
 
 	※ 정렬하려는 배열의 크기와 똑같은 임시 컨테이너 필요 (공간복잡도 ↑)
@@ -20,6 +20,7 @@ void merge(int* arr, int* arr2, int start, int end)
 	int j{ mid + 1 };
 	int k{ start };
 
+	// 각각 첫번째 원소들부터 시작해 비교해가며 정렬
 	while (i <= mid && j <= end)
 	{
 		if (arr[i] <= arr[j]) arr2[k++] = arr[i++];

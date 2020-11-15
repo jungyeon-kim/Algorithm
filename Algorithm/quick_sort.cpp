@@ -18,7 +18,7 @@ void quickSort(int* arr, int start, int end)
 {
 	if (start >= end) return;					// 더이상 연산할 수 없는 경우
 
-	int pivot{ arr[(start + end + 1) / 2] };	// 중간값을 피벗으로
+	int pivot{ arr[(start + end) / 2] };		// 중간값을 피벗으로
 	int left{ start };
 	int right{ end };
 
@@ -27,6 +27,7 @@ void quickSort(int* arr, int start, int end)
 		while (arr[left] < pivot) ++left;		// pivot보다 크거나 같은 left 탐색
 		while (arr[right] > pivot) --right;		// pivot보다 작거나 같은 right 탐색
 
+		// 위 탐색에서 left와 right가 엇갈리는 경우가 있으므로 검사
 		if (left <= right)
 		{
 			swap(arr[left], arr[right]);		// 스왑

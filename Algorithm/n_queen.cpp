@@ -19,6 +19,7 @@ int DFS(int N, int count)
 
 	// 행을 기준으로 퀸을 놓아본다.
 	for (int i = 0; i < N; ++i)
+		// 증가하는 대각선: 좌측상단 기준, 감소하는 대각선: 좌측하단 기준
 		if (!col[i] && !upDiag[i + count] && !downDiag[(i - count) + N - 1])
 		{
 			col[i] = upDiag[i + count] = downDiag[(i - count) + N - 1] = true;

@@ -7,9 +7,11 @@ using namespace std;
 
 /*
 	순열조합) DFS
+
+	※ DFS에 변수하나를 추가하여 중복된 원소들로 이루어진 순열을 배제할 수 있음
 */
 
-vector<vector<int>>* DFS(int* arr, int size, int limit, int cnt)
+vector<vector<int>>* DFS(int* arr, int size, int limit, int cnt) // int last
 {
 	static vector<vector<int>> v1{};
 	static vector<int> v2{};
@@ -21,12 +23,13 @@ vector<vector<int>>* DFS(int* arr, int size, int limit, int cnt)
 		return nullptr;
 	}
 
+	// int i = last;
 	for (int i = 0; i < size; ++i)
 		if (visited.find(arr[i]) == visited.end() || !visited[arr[i]])
 		{
 			v2.emplace_back(arr[i]);
 			visited[arr[i]] = true;
-			DFS(arr, size, limit, cnt + 1);
+			DFS(arr, size, limit, cnt + 1); // i + 1
 			visited[arr[i]] = false;
 			v2.pop_back();
 		}
@@ -44,7 +47,7 @@ int main()
 
 	vector<vector<int>>* result{};
 	// 순열을 담는 컨테이너가 static 변수이므로 조합이 누적된다.
-	for (int i = 0; i < MAX_SIZE; ++i) result = DFS(arr, MAX_SIZE, i + 1, 0);
+	for (int i = 0; i < MAX_SIZE; ++i) result = DFS(arr, MAX_SIZE, i + 1, 0); // 0
 
 	for (const auto& i : *result)
 	{
